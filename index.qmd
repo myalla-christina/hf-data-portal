@@ -1,0 +1,27 @@
+---
+title: "Health Facility Data Portal"
+subtitle: "Structured health facility demographics and services data for modelling and analysis"
+format:
+  html:
+    theme: cosmo
+    toc: false
+---
+
+## 📌 What is this?
+
+This portal provides **clean, structured, and reusable health facility data** extracted from official facility profile PDFs.
+
+The dataset is designed to support: - Disease modelling (e.g. malaria, HIV) - Spatial accessibility analysis - Health systems research - Program planning and evaluation
+
+------------------------------------------------------------------------
+
+## 📊 Dataset coverage
+
+\`\`\`{r} \# Load required packages library(readr) library(dplyr)
+
+# Read datasets (adjust paths if needed)
+
+hf_demo \<- read_csv("data/outputs/hf_demographics.csv", show_col_types = FALSE) hf_services \<- read_csv("data/outputs/hf_services.csv", show_col_types = FALSE)
+
+tibble( Metric = c( "Total health facilities", "Facilities with service data", "Unique service categories" ), Value = c( n_distinct(hf_demo$file),
+    n_distinct(hf_services$file), n_distinct(hf_services\$service_category) ) )

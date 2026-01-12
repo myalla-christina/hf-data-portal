@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  title: "Health Facility Data Portal"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Data
+        menu:
+          - text: Demographics
+            href: demographics.qmd
+          - text: Services
+            href: services.qmd
+      - href: downloads.qmd
+        text: Downloads
+      - href: methodology.qmd
+        text: Methodology
+      - href: changelog.qmd
+        text: Changelog
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual

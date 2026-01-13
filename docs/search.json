@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Health Facility Data Portal",
+    "section": "",
+    "text": "This portal provides clean, structured, and reusable health facility data extracted from official facility profile PDFs.\nThe dataset is designed to support: - Disease modelling (e.g. malaria, HIV) - Spatial accessibility analysis - Health systems research - Program planning and evaluation"
+  },
+  {
+    "objectID": "index.html#what-is-this",
+    "href": "index.html#what-is-this",
+    "title": "Health Facility Data Portal",
+    "section": "",
+    "text": "This portal provides clean, structured, and reusable health facility data extracted from official facility profile PDFs.\nThe dataset is designed to support: - Disease modelling (e.g. malaria, HIV) - Spatial accessibility analysis - Health systems research - Program planning and evaluation"
+  },
+  {
+    "objectID": "index.html#dataset-coverage",
+    "href": "index.html#dataset-coverage",
+    "title": "Health Facility Data Portal",
+    "section": "📊 Dataset coverage",
+    "text": "📊 Dataset coverage\n```{r} # Load required packages library(readr) library(dplyr)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]

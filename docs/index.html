@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -39,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dfb324f25d9b1687192fa8be62ac8f9c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-00a0b77ad6f375b8e10187399d3d76e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,46 +103,20 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/hf_logo.png" alt="Structured HF data for malaria-endemic African countries" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Health Facility Data Portal</span>
     </a>
@@ -117,93 +126,215 @@ window.Quarto = {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Data</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-countries" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Countries</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-data">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-countries">    
         <li>
-    <a class="dropdown-item" href="./demographics.html">
- <span class="dropdown-text">Demographics</span></a>
+    <a class="dropdown-item" href="./countries/tanzania.html">
+ <span class="dropdown-text">Tanzania</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./services.html">
- <span class="dropdown-text">Services</span></a>
+    <a class="dropdown-item" href="./countries/kenya.html">
+ <span class="dropdown-text">Kenya</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./countries/uganda.html">
+ <span class="dropdown-text">Uganda</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./downloads.html"> 
-<span class="menu-text">Downloads</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./methodology.html"> 
-<span class="menu-text">Methodology</span></a>
+<span class="menu-text">Methods</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./changelog.html"> 
-<span class="menu-text">Changelog</span></a>
+    <a class="nav-link" href="./roadmap.html"> 
+<span class="menu-text">Roadmap</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://map.ox.ac.uk"> <i class="bi bi-images/map_logo.jpg" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+    <a href="https://github.com/myalla-christina/hf-data-portal" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mosquito.jpg" class="img-fluid figure-img"></p>
+<figcaption>Africa Health Facilities Map</figcaption>
+</figure>
+</div>
+</div></div>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Health Facility Data Portal</h1>
-<p class="subtitle lead">Structured health facility demographics and services data for modelling and analysis</p>
+
+
+
+<!-- ===================== -->
+<!-- Hero Image -->
+<!-- ===================== -->
+<p>This page brought to you by <a href="https://example.com" class="uri">https://example.com</a></p><div class="hero-image">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mosquito.jpg" class="img-fluid figure-img"></p>
+<figcaption>Africa Health Facilities Map</figcaption>
+</figure>
+</div>
+</div>
+<!-- ===================== -->
+<!-- Welcome Text -->
+<!-- ===================== -->
+<section id="geocoded-health-facility-data-for-malaria-endemic-africa" class="level1 hero-welcome">
+<h1>Geocoded Health Facility Data for Malaria-Endemic Africa</h1>
+<p>This portal provides harmonized, facility-level demographic, service,<br>
+and equipment data across malaria-endemic African countries.<br>
+The data are structured to directly support malaria modelling,<br>
+spatial accessibility analysis, and health systems research.</p>
+</section>
+<div class="section-light">
+<!-- ===================== -->
+<!-- Core Services -->
+<!-- ===================== -->
+<div class="services-container">
+<div class="service-card">
+<h3 class="anchored">
+Facility Demographics
+</h3>
+<p>
+Standardized information on facility type, ownership, administrative location, and geocoordinates.
+</p>
+</div>
+<div class="service-card">
+<h3 class="anchored">
+Service Availability
+</h3>
+<p>
+Facility-level availability of clinical and diagnostic services, including malaria-related interventions.
+</p>
+</div>
+<div class="service-card">
+<h3 class="anchored">
+Equipment &amp; Readiness
+</h3>
+<p>
+Availability of essential equipment and commodities relevant to malaria case management and service readiness.
+</p>
+</div>
+</div>
+<hr>
+<section id="why-this-portal-exists" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-portal-exists">Why this portal exists</h2>
+<p>Reliable, geocoded health facility data remain scarce across many malaria-endemic African countries. Existing datasets are often fragmented, stored in PDF formats, or lack the standardization required for spatial and mathematical modelling.</p>
+<p>This portal addresses this gap by extracting, cleaning, and structuring facility profile data into analysis-ready formats.</p>
+</section>
+<section id="what-this-portal-provides" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-portal-provides">What this portal provides</h2>
+<ul>
+<li>Harmonized facility-level datasets across countries</li>
+<li>Consistent classification of services and facility attributes</li>
+<li>Geographic coordinates suitable for spatial modelling</li>
+<li>Reusable outputs for integration into malaria transmission models</li>
+</ul>
+</section>
+<section id="intended-users" class="level2">
+<h2 class="anchored" data-anchor-id="intended-users">Intended users</h2>
+<p>The primary users of this portal are malaria modelers, epidemiologists, geospatial analysts, and health systems researchers.</p>
+<hr>
+</section>
+<section id="dataset-coverage" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-coverage">Dataset coverage</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr) </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>hf_demo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/hf_demographics.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>New names:
+• `` -&gt; `...11`</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>hf_services <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/hf_services.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>( <span class="at">Metric =</span> <span class="fu">c</span>( <span class="st">"Total health facilities"</span>, <span class="st">"Facilities with service data"</span>, <span class="st">"Unique service categories"</span> ), <span class="at">Value =</span> <span class="fu">c</span>( <span class="fu">n_distinct</span>(hf_demo<span class="sc">$</span>facility_code),<span class="fu">n_distinct</span>(hf_services<span class="sc">$</span>facility_code), <span class="fu">n_distinct</span>(hf_services<span class="sc">$</span>general_services) ) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  Metric                       Value
+  &lt;chr&gt;                        &lt;int&gt;
+1 Total health facilities          7
+2 Facilities with service data     7
+3 Unique service categories        7</code></pre>
+</div>
+</div>
+<!-- ===================== -->
+<!-- Our Values Section -->
+<!-- ===================== -->
+<section id="our-values" class="level3 values-section">
+<h3 class="anchored" data-anchor-id="our-values"><i class="bi bi-heart"></i> Our Values</h3>
+<div class="values-grid">
+<section id="openness" class="level4 value-card">
+<h4 class="anchored" data-anchor-id="openness">Openness</h4>
+<p>We promote open data principles and transparent workflows to ensure that health facility data can be accessed, reviewed, and reused by researchers, policymakers, and implementers.</p>
+</section>
+<section id="transparency" class="level4 value-card">
+<h4 class="anchored" data-anchor-id="transparency">Transparency</h4>
+<p>All data processing steps, assumptions, and limitations are clearly documented to support reproducibility, trust, and informed interpretation.</p>
+</section>
+<section id="robust-methods" class="level4 value-card">
+<h4 class="anchored" data-anchor-id="robust-methods">Robust Methods</h4>
+<p>We apply rigorous data validation, geospatial harmonization, and methodological best practices to ensure analytical reliability for malaria modelling and health systems research.</p>
+</section>
+</div>
+</section>
+<!-- ===================== -->
+<!-- Footer Bar -->
+<!-- ===================== -->
+<div class="footer-bar">
+<div class="footer-content">
+<p><span>© 2026 Health Facility Data Portal</span> <span class="footer-logos"> <img src="images/sponsor1.png" alt="Sponsor 1"> <img src="images/sponsor2.png" alt="Sponsor 2"> </span></p>
+</div>
+</div>
+</section>
 </div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="what-is-this" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-this">📌 What is this?</h2>
-<p>This portal provides <strong>clean, structured, and reusable health facility data</strong> extracted from official facility profile PDFs.</p>
-<p>The dataset is designed to support: - Disease modelling (e.g.&nbsp;malaria, HIV) - Spatial accessibility analysis - Health systems research - Program planning and evaluation</p>
-<hr>
-</section>
-<section id="dataset-coverage" class="level2">
-<h2 class="anchored" data-anchor-id="dataset-coverage">📊 Dataset coverage</h2>
-<p>```{r} # Load required packages library(readr) library(dplyr)</p>
-</section>
-<section id="read-datasets-adjust-paths-if-needed" class="level1">
-<h1>Read datasets (adjust paths if needed)</h1>
-<p>hf_demo &lt;- read_csv(“data/outputs/hf_demographics.csv”, show_col_types = FALSE) hf_services &lt;- read_csv(“data/outputs/hf_services.csv”, show_col_types = FALSE)</p>
-<p>tibble( Metric = c( “Total health facilities”, “Facilities with service data”, “Unique service categories” ), Value = c( n_distinct(hf_demo<span class="math inline">\(file),
-    n_distinct(hf_services\)</span>file), n_distinct(hf_services$service_category) ) )</p>
-
-
-</section>
-
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -604,6 +735,19 @@ window.Quarto = {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2026, Christina Myalla</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

@@ -1,27 +1,151 @@
 ---
-title: "Health Facility Data Portal"
-subtitle: "Structured health facility demographics and services data for modelling and analysis"
-format:
-  html:
-    theme: cosmo
-    toc: false
+title: ""
+subtitle: ""
+page-layout: full
+toc: false
 ---
 
-## 📌 What is this?
+<!-- ===================== -->
+<!-- Hero Image -->
+<!-- ===================== -->
 
-This portal provides **clean, structured, and reusable health facility data** extracted from official facility profile PDFs.
+::: hero-image
+![Africa Health Facilities Map](images/mosquito.jpg)
+:::
 
-The dataset is designed to support: - Disease modelling (e.g. malaria, HIV) - Spatial accessibility analysis - Health systems research - Program planning and evaluation
+<!-- ===================== -->
+<!-- Welcome Text -->
+<!-- ===================== -->
+
+::: hero-welcome
+# Geocoded Health Facility Data for Malaria-Endemic Africa
+
+This portal provides harmonized, facility-level demographic, service,  
+and equipment data across malaria-endemic African countries.  
+The data are structured to directly support malaria modelling,  
+spatial accessibility analysis, and health systems research.
+:::
+
+::: section-light
+<!-- ===================== -->
+
+<!-- Core Services -->
+
+<!-- ===================== -->
+
+:::::: services-container
+::: service-card
+        
+<h3>Facility Demographics</h3>
+<p>
+  Standardized information on facility type, ownership,
+  administrative location, and geocoordinates.
+</p>
+
+:::
+
+::: service-card
+        
+<h3>Service Availability</h3>
+<p>
+  Facility-level availability of clinical and diagnostic services,
+  including malaria-related interventions.
+</p>
+
+:::
+
+::: service-card
+         
+<h3>Equipment & Readiness</h3>
+<p>
+  Availability of essential equipment and commodities relevant
+  to malaria case management and service readiness.
+</p>
+
+:::
+::::::
 
 ------------------------------------------------------------------------
 
-## 📊 Dataset coverage
+## Why this portal exists
 
-\`\`\`{r} \# Load required packages library(readr) library(dplyr)
+Reliable, geocoded health facility data remain scarce across many malaria-endemic African countries. Existing datasets are often fragmented, stored in PDF formats, or lack the standardization required for spatial and mathematical modelling.
 
-# Read datasets (adjust paths if needed)
+This portal addresses this gap by extracting, cleaning, and structuring facility profile data into analysis-ready formats.
 
-hf_demo \<- read_csv("data/outputs/hf_demographics.csv", show_col_types = FALSE) hf_services \<- read_csv("data/outputs/hf_services.csv", show_col_types = FALSE)
+## What this portal provides
 
-tibble( Metric = c( "Total health facilities", "Facilities with service data", "Unique service categories" ), Value = c( n_distinct(hf_demo$file),
-    n_distinct(hf_services$file), n_distinct(hf_services\$service_category) ) )
+-   Harmonized facility-level datasets across countries
+-   Consistent classification of services and facility attributes
+-   Geographic coordinates suitable for spatial modelling
+-   Reusable outputs for integration into malaria transmission models
+
+## Intended users
+
+The primary users of this portal are malaria modelers, epidemiologists, geospatial analysts, and health systems researchers.
+
+------------------------------------------------------------------------
+
+## Dataset coverage
+
+```{r} 
+library(readr) 
+library(dplyr)
+
+hf_demo <- read_csv("data/hf_demographics.csv", show_col_types = FALSE) 
+hf_services <- read_csv("data/hf_services.csv", show_col_types = FALSE)
+
+tibble( Metric = c( "Total health facilities", "Facilities with service data", "Unique service categories" ), Value = c( n_distinct(hf_demo$facility_code),n_distinct(hf_services$facility_code), n_distinct(hf_services$general_services) ) )
+
+```    
+
+<!-- ===================== -->
+<!-- Our Values Section -->
+<!-- ===================== -->
+
+::: values-section
+
+### <i class="bi bi-heart"></i> Our Values
+
+::: values-grid
+::: value-card
+#### Openness
+We promote open data principles and transparent workflows to ensure that
+health facility data can be accessed, reviewed, and reused by researchers,
+policymakers, and implementers.
+:::
+
+::: value-card
+#### Transparency
+All data processing steps, assumptions, and limitations are clearly documented
+to support reproducibility, trust, and informed interpretation.
+:::
+
+::: value-card
+#### Robust Methods
+We apply rigorous data validation, geospatial harmonization, and methodological
+best practices to ensure analytical reliability for malaria modelling and
+health systems research.
+:::
+:::
+
+:::
+
+<!-- ===================== -->
+<!-- Footer Bar -->
+<!-- ===================== -->
+
+::: footer-bar
+<div class="footer-content">
+  <span>© 2026 Health Facility Data Portal</span>
+  <span class="footer-logos">
+    <img src="images/sponsor1.png" alt="Sponsor 1">
+    <img src="images/sponsor2.png" alt="Sponsor 2">
+  </span>
+</div>
+:::
+
+
+
+
+:::

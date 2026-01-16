@@ -1,30 +1,54 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - images/
 
 website:
   title: "Health Facility Data Portal"
+  body-header: This page brought to you by <https://example.com>
+  margin-header: "  ![Africa Health Facilities Map](images/mosquito.jpg)"
+  back-to-top-navigation: true
+  page-footer: 
+    left: "Copyright 2026, Christina Myalla"
+    background: light
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - text: Data
-        menu:
-          - text: Demographics
-            href: demographics.qmd
-          - text: Services
-            href: services.qmd
-      - href: downloads.qmd
-        text: Downloads
-      - href: methodology.qmd
-        text: Methodology
-      - href: changelog.qmd
-        text: Changelog
-
+    search: true
+    logo: images/hf_logo.png
+    logo-alt: "Structured HF data for malaria-endemic African countries"
+    logo-href: /index.html
+    tools:
+      - icon: github
+        href: https://github.com/myalla-christina/hf-data-portal
+    right:
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about.qmd
+      - text: Countries
+        menu: 
+          - text: "Tanzania"
+            href: countries/tanzania.qmd
+          - text: Kenya
+            href: countries/kenya.qmd
+          - text: Uganda
+            href: countries/uganda.qmd
+      - text: Methods
+        href: methodology.qmd
+      - text: Roadmap
+        href: roadmap.qmd
+      - icon: images/map_logo.jpg
+        href: https://map.ox.ac.uk   # optional link
+        
+ 
 format:
   html:
-    theme: cosmo
+    theme: flatly
     css: styles.css
-    toc: true
+    respect-user-color-scheme: true
 
-editor: visual
+
+
+
+  
+     

@@ -1,0 +1,7 @@
+---
+title: "countries"
+---
+
+#| include: false   # Do not show code or output
+#| echo: false      # Do not show code, only output
+#| eval: false      # Do not run the code

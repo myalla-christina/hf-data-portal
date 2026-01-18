@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>countries – Health Facility Data Portal</title>
+<title>tanzania – Health Facility Data Portal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-00a0b77ad6f375b8e10187399d3d76e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-762edc9a712ea7f73a7daed412914cbf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,6 +67,26 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+
+<script src="../site_libs/leaflet-1.3.1/leaflet.js"></script>
+
+<link href="../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+
+<script src="../site_libs/proj4-2.6.2/proj4.min.js"></script>
+
+<script src="../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+
+<link href="../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+
+<script src="../site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -93,8 +113,9 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../index.html"> <i class="bi bi-house-door-fill" role="img">
+</i> 
+<span class="menu-text"> </span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
@@ -141,44 +162,84 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/mosquito.jpg" class="img-fluid figure-img"></p>
-<figcaption>Africa Health Facilities Map</figcaption>
-</figure>
-</div>
-</div></div>
-        
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="country-title title display-7">
+<p>Tanzania <img src="../images/flags/tz_flag.png" alt="Tanzania flag" class="country-flag"></p>
+</h1></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">countries</h1>
+
+
+
+<div class="full-width-banner">
+<div class="country-hero">
+<p><img src="../images/banner3.png" class="country-banner img-fluid"></p>
+<div class="country-hero-text">
+
+<h2 class="anchored">
+Geocoded Health Facilities for Malaria Modelling
+</h2>
+<p>
+Standardized, geolocated facility information to strengthen modelling, planning, and decision-making
+</p>
 </div>
+</div>
+</div>
+<!-- ===================== -->
+<!-- Map + Section Navigation -->
+<!-- ===================== -->
+<div class="columns country-main">
+<div class="column" style="width:70%;">
+<section id="health-facilities-map" class="level2">
+<h2 class="anchored" data-anchor-id="health-facilities-map">Health Facilities Map</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-931f70cab7bcfbc9067e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-931f70cab7bcfbc9067e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircleMarkers","args":[[-2.64496,-2.44682,-3.55117,-9.501390000000001,-7.19919,-1.30831,-5.07611],[34.01009,32.1526,33.69935,33.3476,39.0225,33.964,39.10071],3,null,null,{"interactive":true,"className":"","stroke":false,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.7},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-9.501390000000001,-1.30831],"lng":[32.1526,39.10071]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+</div><div class="column toc-panel" style="width:30%;">
+<section id="on-this-page" class="level3">
+<h3 class="anchored" data-anchor-id="on-this-page">On this page</h3>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#demographics">Demographics</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#data-download">Data Download</a></li>
+</ul>
+</section>
+</div>
+</div>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This section gives a general summary of health facilities in Tanzania.<br>
+You can include charts, stats, or key messages here.</p>
+</section>
+<section id="demographics" class="level2">
+<h2 class="anchored" data-anchor-id="demographics">Demographics</h2>
+<p>Here you display facility-level demographic info, e.g., number of beds, staff, population served, etc.</p>
+</section>
+<section id="services" class="level2">
+<h2 class="anchored" data-anchor-id="services">Services</h2>
+<p>Details of available services per facility, e.g., outpatient, malaria, maternal health, HIV services.</p>
+</section>
+<section id="data-download" class="level2">
+<h2 class="anchored" data-anchor-id="data-download">Data Download</h2>
+<p>Provide links for users to download:</p>
+<ul>
+<li><a href="../data/tanzania/hf_demographics.csv">CSV</a><br>
+</li>
+<li><a href="../data/tanzania/hf_demographics.json">JSON</a><br>
+</li>
+<li><a href="../data/tanzania/hf_demographic_sf.rds">RDS</a></li>
+</ul>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>This page brought to you by <a href="https://example.com" class="uri">https://example.com</a></p><p>#| include: false # Do not show code or output #| echo: false # Do not show code, only output #| eval: false # Do not run the code</p>
-
-
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -584,14 +645,14 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Copyright 2026, Christina Myalla</p>
+<p>Copyright 2026, HF Portal</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+<p>Sponsored by <img src="images/gates.png" style="margin-left:8px;" height="26"></p>
+</div>
   </div>
 </footer>
 

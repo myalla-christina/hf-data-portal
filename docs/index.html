@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -74,7 +39,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-00a0b77ad6f375b8e10187399d3d76e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-762edc9a712ea7f73a7daed412914cbf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -128,8 +93,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
+    <a class="nav-link active" href="./index.html" aria-current="page"> <i class="bi bi-house-door-fill" role="img">
+</i> 
+<span class="menu-text"> </span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
@@ -179,17 +145,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/mosquito.jpg" class="img-fluid figure-img"></p>
-<figcaption>Africa Health Facilities Map</figcaption>
-</figure>
-</div>
-</div></div>
-    </div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
@@ -197,7 +155,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- ===================== -->
 <!-- Hero Image -->
 <!-- ===================== -->
-<p>This page brought to you by <a href="https://example.com" class="uri">https://example.com</a></p><div class="hero-image">
+<div class="hero-image">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/mosquito.jpg" class="img-fluid figure-img"></p>
@@ -268,30 +226,6 @@ Availability of essential equipment and commodities relevant to malaria case man
 <section id="dataset-coverage" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-coverage">Dataset coverage</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr) </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dplyr'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:stats':
-
-    filter, lag</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>hf_demo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/hf_demographics.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>New names:
-• `` -&gt; `...11`</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>hf_services <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/hf_services.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>( <span class="at">Metric =</span> <span class="fu">c</span>( <span class="st">"Total health facilities"</span>, <span class="st">"Facilities with service data"</span>, <span class="st">"Unique service categories"</span> ), <span class="at">Value =</span> <span class="fu">c</span>( <span class="fu">n_distinct</span>(hf_demo<span class="sc">$</span>facility_code),<span class="fu">n_distinct</span>(hf_services<span class="sc">$</span>facility_code), <span class="fu">n_distinct</span>(hf_services<span class="sc">$</span>general_services) ) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   Metric                       Value
@@ -308,15 +242,15 @@ Attaching package: 'dplyr'</code></pre>
 <h3 class="anchored" data-anchor-id="our-values"><i class="bi bi-heart"></i> Our Values</h3>
 <div class="values-grid">
 <section id="openness" class="level4 value-card">
-<h4 class="anchored" data-anchor-id="openness">Openness</h4>
+<h4 class="anchored" data-anchor-id="openness"><i class="bi bi-book"></i> Openness</h4>
 <p>We promote open data principles and transparent workflows to ensure that health facility data can be accessed, reviewed, and reused by researchers, policymakers, and implementers.</p>
 </section>
 <section id="transparency" class="level4 value-card">
-<h4 class="anchored" data-anchor-id="transparency">Transparency</h4>
+<h4 class="anchored" data-anchor-id="transparency"><i class="bi bi-eye"></i> Transparency</h4>
 <p>All data processing steps, assumptions, and limitations are clearly documented to support reproducibility, trust, and informed interpretation.</p>
 </section>
 <section id="robust-methods" class="level4 value-card">
-<h4 class="anchored" data-anchor-id="robust-methods">Robust Methods</h4>
+<h4 class="anchored" data-anchor-id="robust-methods"><i class="bi bi-bar-chart"></i> Robust Methods</h4>
 <p>We apply rigorous data validation, geospatial harmonization, and methodological best practices to ensure analytical reliability for malaria modelling and health systems research.</p>
 </section>
 </div>
@@ -738,14 +672,14 @@ Attaching package: 'dplyr'</code></pre>
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Copyright 2026, Christina Myalla</p>
+<p>Copyright 2026, HF Portal</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-      &nbsp;
-    </div>
+<p>Sponsored by <img src="images/gates.png" style="margin-left:8px;" height="26"></p>
+</div>
   </div>
 </footer>
 

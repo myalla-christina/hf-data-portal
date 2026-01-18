@@ -4,63 +4,98 @@
     "href": "services.html",
     "title": "Services",
     "section": "",
-    "text": "This page brought to you by https://example.com\n\n Back to top"
+    "text": "Back to top"
   },
   {
     "objectID": "methodology.html",
     "href": "methodology.html",
     "title": "Methodology",
     "section": "",
-    "text": "This page brought to you by https://example.com\n\n Back to top"
+    "text": "Back to top"
   },
   {
     "objectID": "downloads.html",
     "href": "downloads.html",
     "title": "Downloads",
     "section": "",
-    "text": "This page brought to you by https://example.com\n\n Back to top"
+    "text": "Back to top"
   },
   {
     "objectID": "countries/uganda.html",
     "href": "countries/uganda.html",
     "title": "countries",
     "section": "",
-    "text": "This page brought to you by https://example.com\n\n Back to top"
+    "text": "Back to top"
   },
   {
     "objectID": "countries/kenya.html",
     "href": "countries/kenya.html",
     "title": "countries",
     "section": "",
-    "text": "This page brought to you by https://example.com\n\n Back to top"
+    "text": "Back to top"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This page brought to you by https://example.comAbout this site\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n Back to top"
+    "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "countries/tanzania.html",
     "href": "countries/tanzania.html",
-    "title": "countries",
+    "title": "\nTanzania \n",
     "section": "",
-    "text": "This page brought to you by https://example.com#| include: false # Do not show code or output #| echo: false # Do not show code, only output #| eval: false # Do not run the code\n\n\n\n Back to top"
+    "text": "Standardized, geolocated facility information to strengthen modelling, planning, and decision-making"
+  },
+  {
+    "objectID": "countries/tanzania.html#health-facilities-map",
+    "href": "countries/tanzania.html#health-facilities-map",
+    "title": "\nTanzania \n",
+    "section": "Health Facilities Map",
+    "text": "Health Facilities Map"
+  },
+  {
+    "objectID": "countries/tanzania.html#overview",
+    "href": "countries/tanzania.html#overview",
+    "title": "\nTanzania \n",
+    "section": "Overview",
+    "text": "Overview\nThis section gives a general summary of health facilities in Tanzania.\nYou can include charts, stats, or key messages here."
+  },
+  {
+    "objectID": "countries/tanzania.html#demographics",
+    "href": "countries/tanzania.html#demographics",
+    "title": "\nTanzania \n",
+    "section": "Demographics",
+    "text": "Demographics\nHere you display facility-level demographic info, e.g., number of beds, staff, population served, etc."
+  },
+  {
+    "objectID": "countries/tanzania.html#services",
+    "href": "countries/tanzania.html#services",
+    "title": "\nTanzania \n",
+    "section": "Services",
+    "text": "Services\nDetails of available services per facility, e.g., outpatient, malaria, maternal health, HIV services."
+  },
+  {
+    "objectID": "countries/tanzania.html#data-download",
+    "href": "countries/tanzania.html#data-download",
+    "title": "\nTanzania \n",
+    "section": "Data Download",
+    "text": "Data Download\nProvide links for users to download:\n\nCSV\n\nJSON\n\nRDS"
   },
   {
     "objectID": "demographics.html",
     "href": "demographics.html",
     "title": "demographic",
     "section": "",
-    "text": "This page brought to you by https://example.com\n\n Back to top"
+    "text": "Back to top"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Geocoded Health Facility Data for Malaria-Endemic Africa",
     "section": "",
-    "text": "This page brought to you by https://example.com"
+    "text": "Africa Health Facilities Map"
   },
   {
     "objectID": "index.html#why-this-portal-exists",
@@ -88,13 +123,13 @@
     "href": "index.html#dataset-coverage",
     "title": "Geocoded Health Facility Data for Malaria-Endemic Africa",
     "section": "Dataset coverage",
-    "text": "Dataset coverage\n\nlibrary(readr) \nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nhf_demo &lt;- read_csv(\"data/hf_demographics.csv\", show_col_types = FALSE) \n\nNew names:\n• `` -&gt; `...11`\n\nhf_services &lt;- read_csv(\"data/hf_services.csv\", show_col_types = FALSE)\n\ntibble( Metric = c( \"Total health facilities\", \"Facilities with service data\", \"Unique service categories\" ), Value = c( n_distinct(hf_demo$facility_code),n_distinct(hf_services$facility_code), n_distinct(hf_services$general_services) ) )\n\n# A tibble: 3 × 2\n  Metric                       Value\n  &lt;chr&gt;                        &lt;int&gt;\n1 Total health facilities          7\n2 Facilities with service data     7\n3 Unique service categories        7\n\n\n\n\n\n\n Our Values\n\n\nOpenness\nWe promote open data principles and transparent workflows to ensure that health facility data can be accessed, reviewed, and reused by researchers, policymakers, and implementers.\n\n\nTransparency\nAll data processing steps, assumptions, and limitations are clearly documented to support reproducibility, trust, and informed interpretation.\n\n\nRobust Methods\nWe apply rigorous data validation, geospatial harmonization, and methodological best practices to ensure analytical reliability for malaria modelling and health systems research.\n\n\n\n\n\n\n\n\n© 2026 Health Facility Data Portal"
+    "text": "Dataset coverage\n\n\n# A tibble: 3 × 2\n  Metric                       Value\n  &lt;chr&gt;                        &lt;int&gt;\n1 Total health facilities          7\n2 Facilities with service data     7\n3 Unique service categories        7\n\n\n\n\n\n\n Our Values\n\n\n Openness\nWe promote open data principles and transparent workflows to ensure that health facility data can be accessed, reviewed, and reused by researchers, policymakers, and implementers.\n\n\n Transparency\nAll data processing steps, assumptions, and limitations are clearly documented to support reproducibility, trust, and informed interpretation.\n\n\n Robust Methods\nWe apply rigorous data validation, geospatial harmonization, and methodological best practices to ensure analytical reliability for malaria modelling and health systems research.\n\n\n\n\n\n\n\n\n© 2026 Health Facility Data Portal"
   },
   {
     "objectID": "roadmap.html",
     "href": "roadmap.html",
     "title": "changelog",
     "section": "",
-    "text": "This page brought to you by https://example.com\n\n Back to top"
+    "text": "Back to top"
   }
 ]

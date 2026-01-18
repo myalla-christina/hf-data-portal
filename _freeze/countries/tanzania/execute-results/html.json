@@ -1,0 +1,21 @@
+{
+  "hash": "fefa738616f469c78c9da9f82ddacc3a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\nruntime: shiny\ntoc: false\n---\n\n\n\n::::: full-width-banner\n:::: country-hero\n![](../images/banner3.png){.country-banner}\n\n::: country-hero-text\n<h1 class=\"country-title\">\n\nTanzania <img src=\"../images/flags/tz_flag.png\" alt=\"Tanzania flag\" class=\"country-flag\"/>\n\n</h1>\n\n<h2>Geocoded Health Facilities for Malaria Modelling</h2>\n\n<p>Standardized, geolocated facility information to strengthen modelling, planning, and decision-making</p>\n:::\n::::\n:::::\n\n<!-- ===================== -->\n\n<!-- Map + Section Navigation -->\n\n<!-- ===================== -->\n\n:::: {.columns .country-main}\n::: {.column width=\"70%\"}\n## Health Facilities Map\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"leaflet html-widget html-fill-item\" id=\"htmlwidget-931f70cab7bcfbc9067e\" style=\"width:100%;height:464px;\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-931f70cab7bcfbc9067e\">{\"x\":{\"options\":{\"crs\":{\"crsClass\":\"L.CRS.EPSG3857\",\"code\":null,\"proj4def\":null,\"projectedBounds\":null,\"options\":{}}},\"calls\":[{\"method\":\"addTiles\",\"args\":[\"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\",null,null,{\"minZoom\":0,\"maxZoom\":18,\"tileSize\":256,\"subdomains\":\"abc\",\"errorTileUrl\":\"\",\"tms\":false,\"noWrap\":false,\"zoomOffset\":0,\"zoomReverse\":false,\"opacity\":1,\"zIndex\":1,\"detectRetina\":false,\"attribution\":\"&copy; <a href=\\\"https://openstreetmap.org/copyright/\\\">OpenStreetMap<\\/a>,  <a href=\\\"https://opendatacommons.org/licenses/odbl/\\\">ODbL<\\/a>\"}]},{\"method\":\"addCircleMarkers\",\"args\":[[-2.64496,-2.44682,-3.55117,-9.501390000000001,-7.19919,-1.30831,-5.07611],[34.01009,32.1526,33.69935,33.3476,39.0225,33.964,39.10071],3,null,null,{\"interactive\":true,\"className\":\"\",\"stroke\":false,\"color\":\"#03F\",\"weight\":5,\"opacity\":0.5,\"fill\":true,\"fillColor\":\"#03F\",\"fillOpacity\":0.7},null,null,null,null,null,{\"interactive\":false,\"permanent\":false,\"direction\":\"auto\",\"opacity\":1,\"offset\":[0,0],\"textsize\":\"10px\",\"textOnly\":false,\"className\":\"\",\"sticky\":true},null]}],\"limits\":{\"lat\":[-9.501390000000001,-1.30831],\"lng\":[32.1526,39.10071]}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n\n:::\n\n:::{.column width=\"30%\" .toc-panel}\n\n### On this page\n\n- [Overview](#overview)\n- [Demographics](#demographics)\n- [Services](#services)\n- [Data Download](#data-download)\n\n\n:::\n\n::::\n\n\n## Overview {#overview}\n\nThis section gives a general summary of health facilities in Tanzania.  \nYou can include charts, stats, or key messages here.\n\n## Demographics {#demographics}\n\nHere you display facility-level demographic info, e.g., number of beds, staff, population served, etc.\n\n## Services {#services}\n\nDetails of available services per facility, e.g., outpatient, malaria, maternal health, HIV services.\n\n## Data Download {#data-download}\n\nProvide links for users to download:\n\n- [CSV](../data/tanzania/hf_demographics.csv)  \n- [JSON](../data/tanzania/hf_demographics.json)  \n- [RDS](../data/tanzania/hf_demographic_sf.rds)\n",
+    "supporting": [
+      "tanzania_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<link href=\"../site_libs/htmltools-fill-0.5.8.1/fill.css\" rel=\"stylesheet\" />\n<script src=\"../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<script src=\"../site_libs/jquery-3.6.0/jquery-3.6.0.min.js\"></script>\n<link href=\"../site_libs/leaflet-1.3.1/leaflet.css\" rel=\"stylesheet\" />\n<script src=\"../site_libs/leaflet-1.3.1/leaflet.js\"></script>\n<link href=\"../site_libs/leafletfix-1.0.0/leafletfix.css\" rel=\"stylesheet\" />\n<script src=\"../site_libs/proj4-2.6.2/proj4.min.js\"></script>\n<script src=\"../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js\"></script>\n<link href=\"../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css\" rel=\"stylesheet\" />\n<script src=\"../site_libs/leaflet-binding-2.2.2/leaflet.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

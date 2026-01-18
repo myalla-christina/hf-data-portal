@@ -5,6 +5,15 @@ page-layout: full
 toc: false
 ---
 
+```{r}
+#| include: false
+knitr::opts_chunk$set(
+  echo = FALSE, #hide code
+  message = FALSE, #hide package messages
+  warning = FALSE #hide warnings
+)
+
+```
 <!-- ===================== -->
 <!-- Hero Image -->
 <!-- ===================== -->
@@ -92,8 +101,8 @@ The primary users of this portal are malaria modelers, epidemiologists, geospati
 library(readr) 
 library(dplyr)
 
-hf_demo <- read_csv("data/hf_demographics.csv", show_col_types = FALSE) 
-hf_services <- read_csv("data/hf_services.csv", show_col_types = FALSE)
+hf_demo <- read_csv("data/tanzania/hf_demographics.csv", show_col_types = FALSE) 
+hf_services <- read_csv("data/tanzania/hf_services.csv", show_col_types = FALSE)
 
 tibble( Metric = c( "Total health facilities", "Facilities with service data", "Unique service categories" ), Value = c( n_distinct(hf_demo$facility_code),n_distinct(hf_services$facility_code), n_distinct(hf_services$general_services) ) )
 
@@ -109,20 +118,20 @@ tibble( Metric = c( "Total health facilities", "Facilities with service data", "
 
 ::: values-grid
 ::: value-card
-#### Openness
+#### <i class="bi bi-book"></i> Openness
 We promote open data principles and transparent workflows to ensure that
 health facility data can be accessed, reviewed, and reused by researchers,
 policymakers, and implementers.
 :::
 
 ::: value-card
-#### Transparency
+#### <i class="bi bi-eye"></i> Transparency
 All data processing steps, assumptions, and limitations are clearly documented
 to support reproducibility, trust, and informed interpretation.
 :::
 
 ::: value-card
-#### Robust Methods
+#### <i class="bi bi-bar-chart"></i> Robust Methods
 We apply rigorous data validation, geospatial harmonization, and methodological
 best practices to ensure analytical reliability for malaria modelling and
 health systems research.

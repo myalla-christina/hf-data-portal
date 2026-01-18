@@ -159,8 +159,15 @@
 .value-card {
   background: #e5e8e6;
   border-radius: 16px;
-  padding: 1.8rem;
+  padding: 2rem;
   text-align: left;
+  margin: 0.8rem;
+}
+
+.value-card i {
+  font-size: 1.8rem;
+  color: #0b2c4d; /* dark blue matching navbar */
+  margin-right: 0.5rem;
 }
 
 .value-card h4 {
@@ -192,11 +199,95 @@
 /* Navbar dropdown text color */
 .navbar .dropdown-menu a {
   color: #ffffff !important;   /* white text */
-  background-color: #007bff;   /* optional: match your navbar background */
+  background-color: #0b2c4d;   /* optional: match your navbar background */
 }
 
 /* Dropdown text on hover */
 .navbar .dropdown-menu a:hover {
   color: #ffd700 !important;  /* gold/yellow or any highlight color */
   background-color: #0056b3;  /* slightly darker blue */
+}
+
+
+.full-width-banner {
+  width: 100vw;       /* viewport width */
+  margin-left: calc(-50vw + 50%);  /* removes container padding */
+}
+
+.country-banner {
+  width: 100%;
+  height: 220px;       /* adjust as needed */
+  object-fit: cover;   /* maintains aspect ratio */
+  display: block;
+}
+
+.country-hero {
+  position: relative;
+}
+
+.country-hero-text {
+  position: absolute;
+  bottom: 25px;
+  left: 40px;
+  color: white;
+}
+
+.country-hero-text h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+/*sticky behaviour - right panel*/
+.toc-panel {
+  position: sticky;
+  top: 80px;
+  background: #f9f9f9;
+  padding: 1em;
+  border-radius: 6px;
+}
+
+.country-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.country-flag {
+  height: 36px;
+  width: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.country-main {
+  margin-top: 2rem;
+}
+
+.country-toc {
+  position: sticky;
+  top: 120px; /* below navbar */
+  padding: 1.25rem;
+  background-color: #f7f9f8;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.country-toc h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.country-toc a {
+  text-decoration: none;
+  display: block;
+  padding: 6px 0;
+  color: #0b2c4d;
+  font-weight: 500;
+}
+
+.country-toc a:hover {
+  text-decoration: underline;
 }

@@ -6,12 +6,11 @@ project:
 
 website:
   title: "Health Facility Data Portal"
-  body-header: This page brought to you by <https://example.com>
-  margin-header: "  ![Africa Health Facilities Map](images/mosquito.jpg)"
   back-to-top-navigation: true
   page-footer: 
-    left: "Copyright 2026, Christina Myalla"
-    background: light
+    left: "Copyright 2026, HF Portal"
+    right: "Sponsored by ![](images/gates.png){height=26px style='margin-left:8px;'}"
+    background: primary
   navbar:
     search: true
     logo: images/hf_logo.png
@@ -21,8 +20,9 @@ website:
       - icon: github
         href: https://github.com/myalla-christina/hf-data-portal
     right:
-      - text: Home
+      - text: " "
         href: index.qmd
+        icon: house-door-fill
       - text: About
         href: about.qmd
       - text: Countries
@@ -43,9 +43,11 @@ website:
  
 format:
   html:
+   
     theme: flatly
     css: styles.css
     respect-user-color-scheme: true
+runtime: shiny    
 
 
 

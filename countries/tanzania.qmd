@@ -1,7 +1,96 @@
 ---
-title: "countries"
+title: ""
+runtime: shiny
+toc: false
 ---
+```{r}
+#| include: false
+knitr::opts_chunk$set(
+  echo = FALSE, #hide code
+  message = FALSE, #hide package messages
+  warning = FALSE #hide warnings
+)
 
-#| include: false   # Do not show code or output
-#| echo: false      # Do not show code, only output
-#| eval: false      # Do not run the code
+```
+
+
+::::: full-width-banner
+:::: country-hero
+![](../images/banner3.png){.country-banner}
+
+::: country-hero-text
+<h1 class="country-title">
+
+Tanzania <img src="../images/flags/tz_flag.png" alt="Tanzania flag" class="country-flag"/>
+
+</h1>
+
+<h2>Geocoded Health Facilities for Malaria Modelling</h2>
+
+<p>Standardized, geolocated facility information to strengthen modelling, planning, and decision-making</p>
+:::
+::::
+:::::
+
+<!-- ===================== -->
+
+<!-- Map + Section Navigation -->
+
+<!-- ===================== -->
+
+:::: {.columns .country-main}
+::: {.column width="70%"}
+## Health Facilities Map
+
+```{r} 
+library(sf) 
+library(leaflet)
+library(shiny)
+library(dplyr)
+
+# Example: load pre processed sf object
+
+hf_sf <- readRDS("../data/tanzania/hf_demographic_sf.rds")
+
+leaflet(hf_sf) |>
+ addTiles() |> 
+ addCircleMarkers( radius = 3, stroke = FALSE, fillOpacity = 0.7 ) 
+
+```
+:::
+
+:::{.column width="30%" .toc-panel}
+
+### On this page
+
+- [Overview](#overview)
+- [Demographics](#demographics)
+- [Services](#services)
+- [Data Download](#data-download)
+
+
+:::
+
+::::
+
+
+## Overview {#overview}
+
+This section gives a general summary of health facilities in Tanzania.  
+You can include charts, stats, or key messages here.
+
+## Demographics {#demographics}
+
+Here you display facility-level demographic info, e.g., number of beds, staff, population served, etc.
+
+## Services {#services}
+
+Details of available services per facility, e.g., outpatient, malaria, maternal health, HIV services.
+
+## Data Download {#data-download}
+
+Provide links for users to download:
+
+- [CSV](../data/tanzania/hf_demographics.csv)  
+- [JSON](../data/tanzania/hf_demographics.json)  
+- [RDS](../data/tanzania/hf_demographic_sf.rds)
